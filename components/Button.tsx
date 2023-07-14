@@ -50,9 +50,10 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>, Va
 
 
 
-const Button = ({children}) => {
+
+const Button: FC<ButtonProps> = ({children, className, intent, size, ...props}) => {
  return (
-    <button>
+    <button className={buttonClasses({intent, size, className})} {...props}>
         {children}
     </button>
  )
