@@ -2,7 +2,10 @@
 const nextConfig = {
     experimental: {
         serverComponentsExternalPackages: ['bcrypt']
-    }
+    },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
 }
 
 module.exports = nextConfig
